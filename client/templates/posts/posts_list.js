@@ -13,7 +13,7 @@ var postsData = [
 	}
 ];
 Template.postsList.helpers({
-	posts: function(){
-		return Posts.find({author: 'bob-smith', category: 'JavScript'});
+	posts: function() {
+		return Posts.find({}, {sort: {submitted: -1}});
 	}
 });
